@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input:not([type="submit"], [type="reset"]) {
+        padding: 10px;
+        width: 300px;
+        border-radius: 15px;
+        text-align: center;
+      }
+      input[type="submit"] {
+        background-color: #0075ff;
+        padding: 8px 15px 8px 15px;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+      input[type="reset"] {
+        background-color: #333;
+        padding: 8px 15px 8px 15px;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+      body {
+        align-items: center;
+        justify-items: center;
+        display: grid;
+        background-color: #fff;
+      }
+      pre {
+        border: 1px solid black;
+        padding: 5px;
+        width: 50%;
+        background-color: #000;
+      }
+      fieldset {
+        background-color: rgba(14, 12, 12, 0.267);
+        width: 100%;
+        padding: 20px 40px;
+        border-radius: 8px;
+        border-color: transparent;
+        outline: none;
+        color: #fff;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      target="_blank" & novalidate : نستعملهم مع الفورم
+      formtarget="_blank & target="_blank" : نستعملهم للانتقال لصفحة اخرى
+      formtarget="_blank" &  formnovalidate : نستعملهم مع الحقل الخاص ببعث البيانات
+      formnovalidate & novalidate: يساعدنا في تخطي الاجبارية حتى ولو لم نملأ الحقل
+      pre : يظهر لك الكتابة كما كتبت حتى الفراغات يظهرها كما هي 
+       -->
+    <form action="31-34.html" method="post" target="_blank" novalidate>
+      <fieldset>
+        <label for="">Search</label>
+        <br /><br />
+        <input type="search" placeholder="Enter A Search Word" autofocus />
+        <br /><br />
+        <label for="">Upload</label>
+        <br /><br />
+        <input type="file" />
+        <br /><br />
+        <label for="">Url</label>
+        <br /><br />
+        <input type="url" required />
+        <br /><br />
+        <label for="">Date</label>
+        <br /><br />
+        <input type="date" value="1982-10-25" />
+        <br /><br />
+        <label for="">Month</label>
+        <br /><br />
+        <input type="month" value="1982-10" />
+        <br /><br />
+        <pre>
+Hello Line One
+Hello Line Two
+Hello Line Three
+        Hello Line Four        
+
+   </pre
+        >
+        <br /><br />
+        <iframe
+          src="https://elzero.org/"
+          width="600"
+          height="350"
+          frameborder="0"
+        ></iframe>
+        <br /><br />
+
+        <input type="submit" value="save" />
+        <input type="reset" value="empty" />
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* PART 1 */
+
+      .assign1 {
+        /*  width: 1000px; */
+        width: 1000px;
+        text-align: center;
+        float: left;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #eee;
+        border: 1px solid;
+      }
+
+      .assign1 div {
+        background-color: #d7d7d7;
+        margin-left: 15px;
+        margin-top: 15px;
+        float: left;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .block1 {
+        width: calc((100% - 30px));
+      }
+
+      .block2 {
+        width: calc((100% - 60px) / 3);
+      }
+
+      .block3 {
+        width: calc((100% - 45px) / 2);
+      }
+
+      .block4 {
+        width: calc((100% - 75px) / 4);
+        margin-bottom: 15px;
+      }
+      /* ***************************************** */
+
+      .clear {
+        clear: both;
+      }
+      /* PART2 */
+
+      .assign2 {
+        margin-top: 10px;
+        border: 1px solid;
+        width: 800px;
+      }
+
+      .assign2 div {
+        margin: 20px auto;
+        width: 300px;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 20px;
+        background-color: grey;
+        color: black;
+      }
+
+      .assign2 .one {
+        background-color: rgba(128, 128, 128, 0.1);
+      }
+
+      .assign2 .two {
+        opacity: 0.1;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: rgb(7, 100, 100);
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>Assignment N°1</h3>
+    <div class="assign1">
+      <div class="block1">Full Width</div>
+      <div class="block2">1/3</div>
+      <div class="block2">1/3</div>
+      <div class="block2">1/3</div>
+      <div class="block3">1/2</div>
+      <div class="block3">1/2</div>
+      <div class="block4">1/4</div>
+      <div class="block4">1/4</div>
+      <div class="block4">1/4</div>
+      <div class="block4">1/4</div>
+    </div>
+    <div class="clear"></div>
+    <h3>Assignment N°2</h3>
+    <div class="assign2">
+      <div class="normal">Normal</div>
+      <div class="one">One</div>
+      <div class="two">Two</div>
+    </div>
+  </body>
+</html>

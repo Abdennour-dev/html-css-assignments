@@ -1,0 +1,90 @@
+<!-- Answers
+    1. button with type=submit  ou input with type = " submit"
+
+    2. title
+
+    3. h3
+
+    4. p
+
+    5. <html lang="">
+
+    6. 10 to 20
+
+    7. <div tabindex="0">
+
+    8. ARIA: (Accessible Rich Internet Applications) ===> is a set of [roles] and [attributes]
+
+    define ways to make web content and web applications more accessible to people with disabilities. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .choose-skill-1,
+      .choose-skill-2 {
+        margin-left: 50px;
+      }
+
+      .skill {
+        font-family: "Times New Roman", Times, serif;
+        color: rgb(220, 0, 0);
+      }
+
+      .choose-skill-1 label {
+        margin-left: 20px;
+      }
+
+      .choose-skill-2 h4 {
+        font-family: "Times New Roman", Times, serif;
+        color: rgb(0, 100, 255);
+      }
+
+      .choose-skill-2 label {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- هذا الحل لا يعتبر صحيحا بنسبة كبيرة اذ ان كل شخص حر في طريقة حله  -->
+
+    <!--first method-->
+    <div class="choose-skill-1">
+      <div class="skill" aria-labelledby="python">Python</div>
+      <label id="python" role="checkbox" aria-checked="false" tabindex="0"
+        >Skill One</label
+      >
+      <hr />
+      <div class="skill" aria-labelledby="php">PHP</div>
+      <label id="php" role="checkbox" aria-checked="false" tabindex="0"
+        >Skill Two</label
+      >
+      <hr />
+      <div class="skill" aria-labelledby="js">Java Script</div>
+      <label id="js" role="checkbox" aria-checked="false" tabindex="0"
+        >Skill Three</label
+      >
+    </div>
+    <br /><br />
+    <!--second method-->
+    <hr />
+    <div class="choose-skill-2">
+      <h4>Python</h4>
+      <input type="checkbox" name="skill" value="Skill One" />
+      <label>Skill One</label>
+      <br />
+      <h4>PHP</h4>
+      <input type="checkbox" name="skill" value="skill tow" />
+      <label>Skill Two</label>
+      <br />
+      <h4>Java Script</h4>
+      <input type="checkbox" name="skill" value="skill three" />
+      <label>Skill Three</label><br />
+    </div>
+  </body>
+</html>
