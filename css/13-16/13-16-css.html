@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>13_16 Assignments for CSS:</title>
+    <style>
+      .part1,
+      .part2 {
+        border: 5px solid gray;
+        background: linear-gradient(
+          85deg,
+          rgb(245, 223, 101),
+          rgb(238, 170, 93)
+        );
+        padding: 10px;
+        margin: 60px;
+        font-size: 16px;
+        font-weight: bold;
+        width: 500px;
+        margin: auto;
+      }
+      .parent,
+      .title,
+      h1 {
+        text-align: center;
+      }
+      h1 {
+        text-decoration: wavy;
+        text-decoration: underline;
+        text-shadow: 3px 3px 3px rgb(128, 82, 82);
+      }
+      div {
+        display: block;
+        justify-content: center;
+        align-items: center; /* middle of the axe (yy')*/
+      }
+      /*  styling the first part: */
+      .child .title {
+        color: red;
+      }
+      span:nth-child(2) {
+        color: blue;
+      }
+      .title,
+      p {
+        color: green;
+      }
+      /* styling the second part: */
+      .box1,
+      .box2,
+      .box3,
+      .box4 {
+        display: block; /* par defaut */
+        color: #fff;
+        font-weight: bold;
+        text-transform: capitalize;
+        border: 5px solid rgb(182, 41, 41);
+        background-color: rgb(182, 41, 41);
+        max-width: 400px;
+        max-height: 40px;
+        padding: 20px 10px;
+        margin: 20px;
+        width: fit-content;
+      }
+      /* هذا الجزء اجتهاد من قبل الاخت نجيبة */
+      .box1:hover {
+        transform: translateY(-10px) scale(1.25);
+        transition: 0.1s;
+      }
+      .box2:hover {
+        transform: translateY(-10px) scale(1.25);
+        transition: 0.1s;
+      }
+      .box3:hover {
+        transform: translateY(-10px) scale(1.25);
+        transition: 0.1s;
+      }
+      .box4:hover {
+        transform: translateY(-10px) scale(1.25);
+        transition: 0.1s;
+      }
+      /* هذا الجزء اجتهاد من قبل الاخت نجيبة */
+      .box4 {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="part1">
+      <!-- FISRT PART:-->
+      <h1>PART 1:</h1>
+      <br />
+      <div class="parent">
+        <div class="child">
+          This Is Child
+          <span class="title">Title</span>
+        </div>
+        <span class="title">Child Title</span>
+        <p>Paragraph Content</p>
+      </div>
+      <div class="title">Section Title</div>
+    </div>
+    <br />
+    <!-- SECOND PART:-->
+    <div class="part2">
+      <h1>PART 2:</h1>
+      <br />
+      <div class="box1">title one</div>
+      <div class="box2">title two with more words</div>
+      <div class="box3">title three with more many many many words</div>
+      <div class="box4">
+        title three with many many many words title three with many many many
+        wordstitle three with many many many words words title three with many
+        many many words title three with many many many wordstitle three with
+        many many many words
+      </div>
+    </div>
+  </body>
+</html>
