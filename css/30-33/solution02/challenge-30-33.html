@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            max-width: 700px;
+            display: grid;
+            grid-template-columns: auto;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        h3 {
+            text-align: center;
+            background-color: rgba(227, 175, 103, 0.582);
+            border-radius: 50px;
+            width: 700px;
+            margin-left: 50px;
+            padding: 10px
+        }
+        
+        .green,
+        .black,
+        .blue,
+        .red {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        
+        .green {
+            background-color: rgb(0, 128, 107);
+            top: 70px;
+            left: 254px;
+            z-index: 2
+        }
+        
+        .red {
+            background-color: rgb(243, 7, 7);
+            top: -13px;
+            left: 270px;
+            z-index: 3;
+        }
+        
+        .blue {
+            background-color: rgb(43, 160, 249);
+            margin: 20px 0px 0px 20px;
+            z-index: 1;
+            top: -170px;
+            left: 215px
+        }
+        
+        .black {
+            background-color: black;
+            top: -250px;
+            left: 235px
+        }
+        /* --------------------------- part 2 ------------------------- */
+        
+        div:not(.green, .black, .blue, .red) {
+            width: 400px;
+            margin: 30px auto;
+            padding: 10px;
+            border: 3px solid;
+            border-color: #ff0000d5 #2ea1ee;
+            background-color: rgba(128, 128, 128, 0.175);
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        span {
+            width: 35px;
+            background-color: #2ea1ee;
+            padding: 2px;
+            position: absolute;
+            text-align: center;
+        }
+        
+        .top-left,
+        .bottom-left {
+            border-right: 3px solid #ff0000d5;
+        }
+        
+        .top-right,
+        .bottom-right {
+            border-left: 3px solid #ff0000d5;
+        }
+        
+        .top-left {
+            top: 595px;
+            left: 160px
+        }
+        
+        .bottom-left {
+            top: 780px;
+            left: 160px
+        }
+        
+        .top-right {
+            top: 595px;
+            left: 580px
+        }
+        
+        .bottom-right {
+            top: 780px;
+            left: 580px
+        }
+        /* ------------------------ part 3 ----------------------- */
+        
+        ul:not(.style) {
+            background-color: white;
+            list-style-type: none;
+            border: 2px solid rgb(165, 159, 159);
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+        
+        ul li {
+            background-color: #eee;
+            margin: 10px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        
+        ol li {
+            background-color: white;
+            margin: 10px;
+            padding-left: 10px;
+            width: 500px;
+        }
+        
+        .roman {
+            list-style-type: upper-roman;
+        }
+        
+        .style {
+            list-style-type: circle;
+            margin-left: 0px;
+            margin-top: 10px;
+            background-color: #eee;
+        }
+        
+        .style .li-style {
+            margin-bottom: 10px;
+            margin-left: -40px;
+            background-color: white;
+            width: 550px;
+            list-style-position: inside;
+            padding-left: 10px;
+        }
+        /* ----------------------PART 4 -------------------------- */
+        
+        table {
+            width: 700px;
+            text-align: center;
+            border-spacing: 1px;
+            text-transform: capitalize;
+            border-bottom: 3px solid rgb(9, 176, 151);
+            margin: 0px 0px 50px 50px
+        }
+        
+        table caption {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        
+        table th {
+            background-color: black;
+            color: white;
+            padding: 10px
+        }
+        
+        table td {
+            background-color: #eee;
+        }
+        
+        table td img {
+            width: 70px;
+            margin: 5px
+        }
+        
+        button {
+            border: none;
+            padding: 5px;
+            width: 60px;
+            color: white;
+        }
+        
+        button[type="submit"] {
+            background-color: rgb(19, 165, 223);
+        }
+        
+        button[type="reset"] {
+            background-color: rgba(255, 0, 106, 0.897);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Task 1</h3>
+    <div class="green"></div>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="black"></div>
+    <!-- **************************** PART 2 ***************** -->
+    <h3>Task 2</h3>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, sed. Ea ipsum similique quasi rem, fugiat voluptatibus reiciendis nam debitis earum quo veniam laudantium mollitia atque! Laborum ea nam doloribus.
+        <span class="top-left">1</span>
+        <span class="bottom-left">2</span>
+        <span class="top-right">3</span>
+        <span class="bottom-right">4</span>
+    </div>
+    <!-- **************************** PART 3 ***************** -->
+    <h3>Task 3</h3>
+    <ul>
+        <li>
+            HTML
+            <ol class="number">
+                <li value="10">Slim</li>
+                <li>Pugjs</li>
+                <li>HAML</li>
+            </ol>
+        </li>
+        <li>
+            CSS
+            <ol class="roman">
+                <li value="10">SASS</li>
+                <li>LESS</li>
+                <li>PostCSS</li>
+            </ol>
+        </li>
+        <li>
+            JavaScript
+            <ul class="style ">
+                <li class="li-style ">Vuejs</li>
+                <li class="li-style ">Sveltejs</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- ***************************PART 4******************************* -->
+    <h3>Task 4</h3>
+    <table>
+        <caption>Developers Rating</caption>
+        <tr>
+            <th>avatar </th>
+            <th>group</th>
+            <th>name</th>
+            <th>points</th>
+            <th>control</th>
+        </tr>
+        <tr>
+            <td><img src="image/img1.jpeg" alt=""></td>
+            <td>ninja</td>
+            <td>ahmed mohamed</td>
+            <td>120</td>
+            <td>
+                <button type="submit">view</button>
+                <button type="reset">delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="image/img1.jpeg" alt=""></td>
+            <td rowspan="2">shades</td>
+            <td>shady nabil</td>
+            <td>180</td>
+            <td>
+                <button type="submit">view</button>
+                <button type="reset">delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="image/img2.png" alt=""></td>
+            <td>Eman mohamed</td>
+            <td>160</td>
+            <td>
+                <button type="submit">view</button>
+                <button type="reset">delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="image/img1.jpeg" alt=""></td>
+            <td rowspan="2">valhala</td>
+            <td>mohammed ibrahim</td>
+            <td>190</td>
+            <td>
+                <button type="submit">view</button>
+                <button type="reset">delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="image/img2.png" alt=""></td>
+            <td>noor atef</td>
+            <td>110</td>
+            <td>
+                <button type="submit">view</button>
+                <button type="reset">delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="image/img1.jpeg" alt=""></td>
+            <td>union</td>
+            <td>mahmoud ael</td>
+            <td>90</td>
+            <td>
+                <button type="submit">view</button>
+                <button type="reset">delete</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
