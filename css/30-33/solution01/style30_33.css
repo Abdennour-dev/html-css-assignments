@@ -99,21 +99,15 @@
          }
          .wrapper1, .wrapper2, .wrapper3, .wrapper4{
              margin-top: 10px;
-             /* height: 800px; */
              width: 800px;
              border: 2px solid grey;
-             /* border-radius: 15px; */
-             /* background-image: linear-gradient(to right top, #6bd1cc, #77d3e6, #95d3f5, #b7d2fa, #d5d1f6, #e1d5f4, #eadaf3, #f1dff2, #f3e7f7, #f5f0fa, #f9f7fd, #ffffff); */
              background-image: linear-gradient(to right top, #ffffff, #eeeeee, #dcdcde, #cbcccd, #babbbd, #b9bbbd, #b9bbbe, #b8bbbe, #c7ccce, #d7ddde, #e8eeee, #f9fffe);
              position: relative;
          }
          .wrapper1{
              height: 300px;
          }
-         .wrapper2{
-             height: 500px;
-         }
-         .wrapper3{
+         .wrapper2, .wrapper3{
              height: 500px;
          }
          .wrapper4{
@@ -176,23 +170,25 @@
             position: absolute;
          }
 
+        .part2 .top-right, .bottom-left{
+            border-left: 2px solid #f44336;
+        }
+        .part2 .top-left, .bottom-left{
+            border-right: 2px solid #f44336;
+        }
          .part2 .top-left{
-             border-right: 2px solid #f44336;
              top: -15px;
              left: -20px;
          }
          .part2 .top-right{
-             border-left: 2px solid #f44336;
              top: -15px;
              right: -20px;
          }
          .part2 .bottom-left{
-             border-right: 2px solid #f44336;
              bottom: -15px;
              left: -20px;
          }
          .part2 .bottom-right{
-             border-left: 2px solid #f44336;
              bottom: -15px;
              right: -20px;
          }
