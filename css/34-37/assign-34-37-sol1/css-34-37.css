@@ -1,0 +1,127 @@
+        body {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+        }
+        
+        h3 {
+            text-align: center;
+            margin: 50px auto;
+            padding: 20px;
+            color: rgb(255, 5, 76);
+            text-transform: uppercase;
+            width: fit-content;
+            border: 5px solid rgb(255, 5, 76);
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgb(255, 5, 76)
+        }
+        
+        hr {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: rgb(255, 5, 76);
+            border: 1px solid
+        }
+        /* ------------------ PART 1 -------------------- */
+        
+        div {
+            width: 300px;
+            height: 60px;
+            margin: 15px auto;
+            text-align: center;
+            line-height: 60px;
+            padding: 10px;
+        }
+        
+        div:nth-of-type(1),
+        div:nth-of-type(3) {
+            background-color: #eee
+        }
+        
+        div:empty {
+            background-color: rgb(243, 43, 43);
+        }
+        /* ------------------- PART 2 ---------------------------- */
+        
+        div:nth-of-type(4) {
+            width: 600px;
+            height: 50px;
+            margin: 15px auto;
+            text-align: left;
+            line-height: 50px;
+            padding: 10px 10px 10px 40px;
+            background-color: rgb(206, 204, 204);
+            position: relative;
+        }
+        
+        div:nth-of-type(4)::before {
+            content: "1";
+            background-color: rgb(234, 43, 43);
+            padding: 0px 5px;
+            height: 50px;
+            width: 30px;
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            text-align: center;
+        }
+        /* -----------------PART 3 --------------------- */
+        
+        p {
+            width: 700px;
+            height: 50px;
+            margin: 15px auto;
+            text-align: left;
+            line-height: 50px;
+            padding: 10px 10px 10px 20px;
+            background-color: #eee;
+            position: relative;
+        }
+        
+        p:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3)) {
+            border-left: 7px solid rgb(255, 5, 76);
+        }
+        
+        p:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3))::before {
+            content: attr(data-person);
+            background-color: rgb(206, 204, 204);
+            position: absolute;
+            left: -210px;
+            top: -12px;
+            margin: 15px auto;
+            width: 150px;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        p:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3))::after {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: 20px;
+            margin: auto;
+            height: 1px;
+            width: 1px;
+            border: 15px solid;
+            border-color: transparent rgb(255, 5, 76) transparent transparent;
+        }
+        /* ---------------- PART 4 -------------------------------- */
+        
+        p:not(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3)) {
+            border-right: 7px solid red;
+            counter-increment: count-product;
+        }
+        
+        p:not(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3))::before {
+            content: counter(count-product);
+            background-color: red;
+            padding: 0px 5px;
+            height: 70px;
+            width: 50px;
+            position: absolute;
+            top: 0px;
+            left: -60px;
+            text-align: center;
+            line-height: 70px;
+            color: white
+        }
