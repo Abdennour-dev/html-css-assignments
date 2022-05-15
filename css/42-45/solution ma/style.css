@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- 1 ---------- */
+.ass1 {
+    width: 400px;
+    margin: 50px auto;
+}
+
+.ass1 .parent {
+    width: 100%;
+    height: 200px;
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 2px;
+    text-transform: capitalize;
+    transition: margin-top .5s linear .5s;
+    -webkit-transition: margin-top .5s linear .5s;
+    -moz-transition: margin-top .5s linear .5s;
+    -ms-transition: margin-top .5s linear .5s;
+    -o-transition: margin-top .5s linear .5s;
+}
+
+.ass1 .parent:hover {
+    margin-top: -20px;
+}
+
+.ass1 .parent:hover .child {
+    margin-top: 30px;
+}
+
+.ass1 .child {
+    background-color: #d4d4d4;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    text-transform: capitalize;
+    transition: margin-top .5s linear .5s;
+    -webkit-transition: margin-top .5s linear .5s;
+    -moz-transition: margin-top .5s linear .5s;
+    -ms-transition: margin-top .5s linear .5s;
+    -o-transition: margin-top .5s linear .5s;
+}
+/* ---------- 2 ---------- */
+.assTwo {
+    background-color: #EEEEEE !important;
+    color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
+    font-size: 20px !important;
+    font-weight: bold;
+    width: 400px;
+    margin: 50px auto;
+    position: relative;
+}
+.assTwo::after {
+    position: absolute;
+    content: "Elzero";
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+/* ---------- 3 ---------- */
+:root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+}
+
+.el {
+    color: var(--mainColor, #ff0000);
+    border: 5px solid var(--mainColor, #000000);
+    padding: var(--mainPadding, 10px);
+    margin: 20px;
+    font-size: 30px;
+}
+
+.el:nth-child(n+6) {
+    color: var(--mainColor000, #ff0000);
+    border: 5px solid var(--mainColor00, #000000);
+    padding: var(--mainPadding00, 10px);
+    margin: 20px;
+    font-size: 30px;
+}

@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+@keyframes animation {
+    0% {
+        box-shadow: 0px 0px 10px grey;
+    }
+    5% {
+        box-shadow: 0px 0px 20px rgb(11, 168, 152);
+        transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+    }
+}
+
+h3 {
+    max-width: 170px;
+    height: 60px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px grey;
+    line-height: 45px;
+    border-radius: 170px;
+    text-align: center;
+    margin: 10px auto;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: max-width 2.2s, zoom .1s, line-height .1s, font-weight .1s, box-shadow .01s, border-radius .01s linear;
+}
+
+h3 .show {
+    visibility: hidden;
+    color: rgb(11, 168, 152);
+    transition: visibility .01s, zoom .5s, color 1s linear 2s;
+}
+
+h3:hover {
+    max-width: 500px;
+    zoom: 120%;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgb(11, 168, 152);
+    border-radius: 0;
+    animation-name: none;
+    text-align: center;
+    line-height: 25px;
+}
+
+h3:hover .show {
+    visibility: visible;
+    zoom: 70%;
+    color: rgb(11, 168, 152);
+}
+
+h3:hover .hover {
+    display: none;
+}
+
+
+/* ************************ PART1 **************************** */
+
+.part1,
+.part2,
+.part3 {
+    width: 750px;
+    border: 1px solid rgb(11, 168, 152);
+    margin: 50px auto;
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.part1 .parent {
+    width: 500px;
+    background: #eee;
+    text-align: center;
+    height: 250px;
+    margin: 50px auto;
+    line-height: 70px;
+    transition: transform .5s linear;
+    position: relative;
+}
+
+.part1 .parent:hover {
+    transform: translateY(-20%);
+}
+
+.part1 .parent:hover .child {
+    transform: translateY(50%);
+}
+
+.part1 .parent .child {
+    width: 400px;
+    background: rgb(208, 204, 204);
+    text-align: center;
+    height: 70px;
+    margin: 0px auto;
+    line-height: 70px;
+    transition: transform .5s linear .5s;
+}
+
+
+/* ----------- PART 2 ------------------- */
+
+.part2 div {
+    background-color: #eee !important;
+    color: #040100 !important;
+    border: none !important;
+    font-size: 20px !important;
+    font-weight: bold;
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.part2 div::after {
+    content: "Elzero";
+}
+
+.part2 div .text {
+    display: none
+}
+
+
+/*  :root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+} */
+
+.part3 div {
+    border: 3px solid var(--mainColor, black);
+    -webkit-border: 3px solid var(--mainColor, black);
+    -ms-border: 3px solid var(--mainColor, black);
+    -o-border: 3px solid var(--mainColor, black);
+    -moz-border: 3px solid var(--mainColor, black);
+    margin: 10px;
+    padding: var(--mainPadding, 10px);
+    color: var(--mainColor, red);
+    font-weight: bold;
+}
+
+
+/*  .part3:hover {
+    --mainColor: black;
+}
+
+.part3:hover div {
+    color: red;
+} */

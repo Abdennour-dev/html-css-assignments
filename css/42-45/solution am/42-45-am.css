@@ -1,0 +1,135 @@
+body {
+  background-color: #b3e8e5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #3bacb6;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.part1,
+.part2,
+.part3 {
+  position: relative;
+  border: 1px solid #2f8f9d;
+}
+.part1 {
+  width: 800px;
+  height: 500px;
+}
+.part2 {
+  width: 800px;
+  height: 170px;
+}
+.part3 {
+  width: 800px;
+  height: 300px;
+}
+
+.p {
+  background-color: #3bacb6;
+  color: white;
+  font-size: 20px;
+  width: 70px;
+  font-weight: bold;
+  padding: 5px;
+  border: 1px solid #3bacb6;
+  margin: 10px;
+}
+
+/* PART1 */
+.parent {
+  width: 600px;
+  height: 300px;
+  background-color: #f2f2f4;
+  text-align: center;
+  padding-top: 20px;
+  color: black;
+  margin: 60px auto;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+  transition-property: transform;
+  transition-timing-function: ease;
+  text-transform: capitalize;
+}
+
+.parent .son {
+  width: 510px;
+  height: 20px;
+  background-color: #dededc;
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  color: black;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+  transition-property: transform;
+  transition-timing-function: ease;
+  text-transform: capitalize;
+}
+
+.parent:hover {
+  /*margin-top: 20px;*/
+  transform: translateY(-20%);
+  -webkit-transform: translateY(-20%);
+  -moz-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
+  -o-transform: translateY(-20%);
+}
+
+.parent:hover .son {
+  /*margin-top: 20px;
+    */
+  transform: translateY(40%);
+  -webkit-transform: translateY(40%);
+  -moz-transform: translateY(40%);
+  -ms-transform: translateY(40%);
+  -o-transform: translateY(40%);
+}
+
+/* PART2 */
+.part2 div:nth-child(2) {
+  background-color: #eee !important;
+  color: black !important;
+  padding: 20px;
+  width: 400px;
+  margin: 20px auto;
+  border: 1px solid transparent !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  text-align: center;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.part2 div:nth-child(2)::before {
+  content: "Elzero";
+  float: left;
+  padding-left: 100px;
+}
+
+/* PART3 */
+/* :root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+} */
+
+.part3 div:nth-child(2),
+.part3 div:nth-child(3),
+.part3 div:nth-child(4) {
+  border: 2px solid var(--mainColor, black);
+  padding: var(--mainPadding, 10px);
+  margin: var(--mainPadding, 10px);
+  color: var(--mainColor, red);
+}
