@@ -1,0 +1,276 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* p1 */
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: space-between;
+}
+.grid div {
+  background-color: #607d8b;
+  width: 240px;
+  height: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.grid div:nth-child(4),
+.grid div:nth-child(5),
+.grid div:nth-child(6) {
+  height: 325px;
+}
+/* befor */
+.grid div:nth-child(1)::before,
+.grid div:nth-child(2)::before,
+.grid div:nth-child(3)::before,
+.grid div:nth-child(4)::before,
+.grid div:nth-child(5)::before,
+.grid div:nth-child(6)::before {
+  color: #fff;
+}
+
+.grid div:nth-child(1)::before {
+  content: "Element 01";
+}
+.grid div:nth-child(2)::before {
+  content: "Element 02";
+}
+.grid div:nth-child(3)::before {
+  content: "Element 03";
+}
+.grid div:nth-child(4)::before {
+  content: "Element 04";
+  top: 45%;
+}
+.grid div:nth-child(5)::before {
+  content: "Element 05";
+  top: 45%;
+}
+.grid div:nth-child(6)::before {
+  content: "Element 06";
+  top: 45%;
+}
+
+/* befor */
+/* end p1 */
+/* p2 */
+.layout {
+  background-color: red;
+  height: 400px;
+  display: grid;
+  grid-template-areas:
+    "head head head head head head head"
+    "secti secti secti secti asid asid asid"
+    "foot foot foot foot foot foot foot";
+  grid-template-rows: 60px 1fr 60px;
+}
+.layout header {
+  grid-area: head;
+  background-color: #03a9f4;
+}
+.layout section {
+  grid-area: secti;
+  background-color: #ff5722;
+}
+.layout aside {
+  grid-area: asid;
+  background-color: #607d8b;
+}
+.layout footer {
+  grid-area: foot;
+  background-color: #009688;
+}
+
+.layout header,
+.layout section,
+.layout aside,
+.layout footer {
+  padding: 10px;
+  color: #fff;
+}
+/* end p2 */
+/* p3 */
+.grid2 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr auto;
+  grid-template-rows: 1fr auto;
+  gap: 15px;
+  margin: auto;
+}
+.grid2 div {
+  background-color: #403f3f;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+}
+/* end p3 */
+/* p4 */
+.grid3 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-areas: "eight eight eight" "two two three" "four five five" "six five five" "seven five five" "one one one";
+  gap: 20px;
+}
+
+.grid3 div {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+
+  background-color: rgb(20, 144, 197);
+}
+
+.grid3 > .one {
+  grid-area: one;
+}
+
+.grid3 > .two {
+  grid-area: two;
+}
+
+.grid3 > .three {
+  grid-area: three;
+}
+
+.grid3 > .four {
+  grid-area: four;
+}
+
+.grid3 > .five {
+  grid-area: five;
+}
+
+.grid3 > .six {
+  grid-area: six;
+}
+
+.grid3 > .seven {
+  grid-area: seven;
+}
+
+.grid3 > .eight {
+  grid-area: eight;
+}
+/* end p4 */
+/* p5 */
+
+.grid4 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 35px 35px;
+  gap: 20px;
+  align-content: space-between;
+}
+
+.grid4 > div {
+  background-color: #e91e63;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+}
+/*  end p5 */
+/*  */
+.last-part {
+  background-color: #eeeeee;
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.grid5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+}
+
+.grid5 div {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-bottom: 3px solid #f54e1f;
+  position: relative;
+  line-height: 1.5;
+}
+
+.grid5 div span {
+  font-size: 60px;
+  position: absolute;
+  bottom: -25px;
+  right: 10px;
+  color: gray;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 2px;
+  font-size: 20px;
+}
+
+.job {
+  color: gray;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.IDP3,
+.IDP5,
+.IDP8 {
+  background-color: black !important;
+  color: #ffffff !important;
+}
+
+.IDP1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / 2;
+}
+
+.IDP5 {
+  grid-column: 2 / span 2;
+  grid-row: 2 / 3;
+}
+
+.IDP6 {
+  grid-column: 2 / span 2;
+  grid-row: 3 / 4;
+}
+
+.IDP4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / span 2;
+}
+
+.IDP3 {
+  grid-column: 4 / 5;
+  grid-row: 1 / span 3;
+}
+/*  */

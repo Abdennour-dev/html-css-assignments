@@ -1,0 +1,161 @@
+:root {
+  --backgrounde1: #ff5722;
+  --backgrounde2: #009688;
+  --colorWhite: #fff;
+}
+/* ---------------01------------------- */
+.E1 h1 {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: var(--backgrounde1);
+  width: 150px;
+  padding: 17px 5px;
+  position: relative;
+}
+
+.E1 h1::before,
+.E1 h1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--backgrounde1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.E1 h1::before {
+  transform: skew(10deg, 10deg);
+}
+
+.E1 h1::after {
+  transform: skew(-10deg, -10deg);
+}
+/* ------------------------------------- */
+/* ------02------- */
+.E2 {
+  width: fit-content;
+  margin: 50px auto;
+}
+
+.E2 h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgrounde2);
+  width: 200px;
+  color: var(--colorWhite);
+  padding: 15px 0px 25px 15px;
+  position: relative;
+}
+
+.E2 h1::before {
+  content: "";
+  background-color: var(--backgrounde2);
+  border-right: solid 10px var(--colorWhite);
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  transform: skew(25deg);
+}
+/* --------------------------------------- */
+/* -------------------03-------------------- */
+.E3 {
+  margin: 50px auto;
+  width: fit-content;
+  height: 200px;
+}
+
+.E3 div {
+  margin-top: 110px;
+  width: 200px;
+  height: 200px;
+  background-color: #607d8b;
+  border-bottom: 5px solid black;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.E3 div::before {
+  content: "";
+  background-color: black;
+  width: 69.8%;
+  height: 69.8%;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  transform: rotate(44.5deg) translate(-50%, -50%);
+  position: absolute;
+  left: 30.5px;
+  top: 30.5px;
+}
+
+.E3 div::after {
+  content: "Elzero";
+  color: var(--colorWhite);
+  font-weight: bold;
+  padding-left: 10px;
+}
+/* --------------------------------------- */
+/* --------------------------------------- */
+
+.E4,
+.E5 {
+  perspective: 1100px;
+}
+
+.E4 div,
+.E5 div {
+  width: 200px;
+  height: 200px;
+  background-color: antiquewhite;
+  margin: 0 auto;
+  position: relative;
+  font-size: 1.6rem;
+  color: var(--colorWhite);
+  transform-style: preserve-3d;
+  transition: 1s 0s ease;
+}
+
+.E4 div::before,
+.E5 div::before {
+  content: "Face";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fa3664;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.E4 div::after,
+.E5 div::after {
+  content: "Back";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1692fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+.E4 div::after {
+  transform: rotateY(180deg);
+}
+.E4:hover div {
+  transform: rotateY(180deg);
+}
+.E5 div::after {
+  transform: rotatex(180deg);
+}
+.E5:hover div {
+  transform: rotateX(180deg);
+}
+/* --------------------------------------- */
