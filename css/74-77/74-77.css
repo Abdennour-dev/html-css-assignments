@@ -204,7 +204,7 @@ section:hover div {
   animation-timing-function: linear;
 }
 
-@keyframes form-e {
+@keyframes form-L {
   0% {
     left: 265px;
     top: 65px;
@@ -251,7 +251,7 @@ section:hover div {
   }
 }
 
-@keyframes form-L {
+@keyframes form-e {
   0% {
     opacity: 0;
   }
