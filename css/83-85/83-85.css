@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+  margin-top: 50px;
+  height: 5px;
+  background-color: black;
+}
+
+.parent1,
+.parent2,
+.parent3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 50px;
+}
+
+.parent1 > div {
+  background-color: #eee;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+@media print {
+  .parent1 > div {
+    font-size: 40px;
+  }
+}
+
+/* part 2 */
+
+.parent2 div,
+.parent3 div {
+  width: calc(100% - 30px);
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  line-height: 1.7rem;
+}
+
+.parent2 div span,
+.parent3 div span {
+  font-weight: bolder;
+}
+
+/* media part */
+
+@media (min-width: 768px) {
+  /* media for part 2 */
+  .parent2 div {
+    width: calc(50% - 25px);
+  }
+  .parent2 div span,
+  .parent3 div span {
+    color: red;
+  }
+  /* media for part 3 */
+  .parent3 div {
+    width: calc(33% - 15px);
+  }
+  .parent3 div:nth-of-type(1) {
+    width: calc(100% - 30px);
+  }
+}
+
+@media (min-width: 992px) {
+  /* media for part 2 */
+  .parent2 div {
+    width: calc(25% - 20px);
+  }
+  .parent2 div span,
+  .parent3 div span {
+    color: #4cb2a8;
+  }
+  /* media for part 3 */
+  .parent3 div {
+    width: calc(50% - 20px);
+  }
+  .parent3 div:nth-of-type(4) {
+    width: calc(100% - 30px);
+  }
+}

@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+h1 {
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  width: 220px;
+  margin: 20px auto;
+  border: 3px solid;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* part1 */
+
+.part1,
+.part2,
+.part3,
+.part4,
+.part5,
+.part6,
+.part7,
+.part8 {
+  width: 500px;
+  height: fit-content;
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  font-size: 2rem;
+  padding: 20px;
+  border: 1.5px solid red;
+}
+
+.part1 div.main.red {
+  color: red;
+  font-weight: bold;
+}
+
+/* part 2 */
+
+/* solution 1 */
+
+.part2 .parent .child:nth-of-type(2) {
+  color: red;
+  font-weight: bold;
+}
+
+/* solution 2 */
+
+.part2 .parent:first-child div:last-child {
+  color: red;
+  font-weight: bold;
+}
+
+/* part 3 */
+
+.part3 .parent:nth-of-type(2) div:only-child {
+  color: red;
+  font-weight: bold;
+}
+
+/* part 4 */
+
+.part4 div[title]:not(.no-need, .parent div) {
+  color: red;
+  font-weight: bold;
+}
+
+/* part 5 */
+
+.part5 div:nth-of-type(2) > p + div {
+  color: red;
+  font-weight: bold;
+}
+
+/* part 6 */
+
+.part6 div > div:nth-last-of-type(2):not(.no-need div) {
+  color: red;
+  font-weight: bold;
+}
+
+/* part 7 */
+
+/* solution 1 */
+
+.part7 div:nth-of-type(1) > h3 + div:nth-of-type(2) {
+  color: red;
+  font-weight: bold;
+}
+
+/* solution 2 */
+
+.part7 div:nth-child(1) > h3:last-of-type + div {
+  color: red;
+  font-weight: bold;
+}
+
+/* part 8 */
+
+/* solution 1 */
+
+.part8 div :not(div:nth-child(1), div:nth-child(7), h3) {
+  color: red;
+  font-weight: bold;
+}
+
+/* solution 2 */
+
+.part8 div :not(div:nth-child(6n + 1), h3) {
+  color: red;
+  font-weight: bold;
+}

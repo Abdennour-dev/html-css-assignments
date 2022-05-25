@@ -135,19 +135,8 @@ section:hover div {
 }
 
 /* ---------------------------------- */
-.four {
-  box-sizing: content-box;
-  width: 600px;
-  height: 600px;
-  border: 1px solid;
-  padding: 10px 50px;
-  margin: 10px auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr) 30px repeat(5, 1fr);
-  grid-template-rows: repeat(11, 1fr);
-  position: relative;
-}
 
+<<<<<<< HEAD
 .four div {
   background-color: #323234;
   padding: 40px;
@@ -273,3 +262,5 @@ section:hover div {
     opacity: 0;
   }
 }
+=======
+>>>>>>> b977b6f05160d514fd308c50d64cf796d0037a5c
